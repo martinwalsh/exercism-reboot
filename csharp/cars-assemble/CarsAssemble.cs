@@ -30,13 +30,9 @@ static class AssemblyLine
         }
     }
 
-    public static double ProductionRatePerHour(int speed)
-    {
-        return speed * 221 * SuccessRate(speed);
-    }
+    public static double ProductionRatePerHour(int speed) =>
+        speed * 221 * SuccessRate(speed);
 
-    public static int WorkingItemsPerMinute(int speed)
-    {
-        return (int)(ProductionRatePerHour(speed) / 60);
-    }
+    public static int WorkingItemsPerMinute(int speed) =>
+        (int)(ProductionRatePerHour(speed) / 60);
 }
