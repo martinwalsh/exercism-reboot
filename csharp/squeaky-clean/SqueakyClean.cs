@@ -7,13 +7,14 @@ public static class Identifier
     {
         StringBuilder builder = new StringBuilder();
         char lastChar = '\0';
+
         foreach (char c in identifier)
         {
-            if (c == ' ') { builder.Append("_"); }
-            else if (char.IsControl(c)) { builder.Append("CTRL"); }
+            if (c >= 'α' && c <= 'ω') { continue; }
             else if (lastChar == '-') { builder.Append(char.ToUpper(c)); }
-            else if (c >= 'α' && c <= 'ω') { continue; }
-            else if (char.IsLetter(c) || c == '_') { builder.Append(c); }
+            else if (char.IsLetter(c)) { builder.Append(c); }
+            else if (char.IsControl(c)) { builder.Append("CTRL"); }
+            else if (char.IsWhiteSpace(c)) { builder.Append("_"); }
             lastChar = c;
         }
         return builder.ToString();
