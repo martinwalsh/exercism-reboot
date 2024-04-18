@@ -6,6 +6,7 @@ pkgs.mkShell {
     leiningen
     dotnet-sdk_8
     bats
+    cmake
   ];
 
   inputsFrom = [ ];
