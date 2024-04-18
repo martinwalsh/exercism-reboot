@@ -5,6 +5,7 @@ pkgs.mkShell {
     clojure
     leiningen
     dotnet-sdk_8
+    bats
   ];
 
   inputsFrom = [ ];
