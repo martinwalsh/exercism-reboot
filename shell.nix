@@ -7,6 +7,7 @@ pkgs.mkShell {
     dotnet-sdk_8
     bats
     cmake
+    crystal_1_8
 
     # # Build gnu-cobol for darwin
     # (gnu-cobol.overrideAttrs (
