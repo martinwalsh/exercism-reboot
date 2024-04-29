@@ -8,6 +8,7 @@ pkgs.mkShell {
     bats
     cmake
     crystal_1_8
+    elixir_1_16
 
     # # Build gnu-cobol for darwin
     # (gnu-cobol.overrideAttrs (
