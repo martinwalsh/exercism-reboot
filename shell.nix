@@ -9,6 +9,9 @@ pkgs.mkShell {
     cmake
     crystal_1_8
     elixir_1_16
+    gleam
+    erlang # for gleam
+    rebar3 # for gleam
 
     # # Build gnu-cobol for darwin
     # (gnu-cobol.overrideAttrs (
